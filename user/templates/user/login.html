@@ -1,0 +1,12 @@
+{% extends "user/layout.html" %}
+{% block body %}
+<form method="POST" action = "{% url 'login_user' %}">
+    {% csrf_token %}
+    <input type="text" name="email" placeholder="email"/>
+    <input type="text" name="password" placeholder="password"/>
+    <input type="submit" value="submit" />
+    {% load static %}
+    <img src="{% static "user/images/img1Enhanced.jpg" %}" alt = "img"></img>
+    <img src="{% static "user/images/img2Enhanced.jpg" %}" alt = "img"></img>
+</form>
+{% endblock %}
